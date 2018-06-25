@@ -1,0 +1,74 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red209\green244\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\csgenericrgb\c82001\c95705\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14560\viewh9140\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \CocoaLigature0 db.gb1.find(\{$where:"feq(this.x,this.y) >=0.5"\}).explain("executionStats")\
+\{\
+	"queryPlanner" : \{\
+		"plannerVersion" : 1,\
+		"namespace" : "nodo0.gb1",\
+		"indexFilterSet" : false,\
+		"parsedQuery" : \{\
+			"$where" : \{\
+				"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0003w",\
+				"scope" : \{\
+					\
+				\}\
+			\}\
+		\},\
+		"winningPlan" : \{\
+			"stage" : "COLLSCAN",\
+			"filter" : \{\
+				"$where" : \{\
+					"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0002d",\
+					"scope" : \{\
+						\
+					\}\
+				\}\
+			\},\
+			"direction" : "forward"\
+		\},\
+		"rejectedPlans" : [ ]\
+	\},\
+	"executionStats" : \{\
+		"executionSuccess" : true,\
+		"nReturned" : 6000000,\
+		"executionTimeMillis" : 220468,\
+		"totalKeysExamined" : 0,\
+		"totalDocsExamined" : 6000000,\
+		"executionStages" : \{\
+			"stage" : "COLLSCAN",\
+			"filter" : \{\
+				"$where" : \{\
+					"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0010n",\
+					"scope" : \{\
+						\
+					\}\
+				\}\
+			\},\
+			"nReturned" : 6000000,\
+			"executionTimeMillisEstimate" : 220460,\
+			"works" : 6000002,\
+			"advanced" : 6000000,\
+			"needTime" : 1,\
+			"needYield" : 0,\
+			"saveState" : 48154,\
+			"restoreState" : 48154,\
+			"isEOF" : 1,\
+			"invalidates" : 0,\
+			"direction" : "forward",\
+			"docsExamined" : 6000000\
+		\}\
+	\},\
+	"serverInfo" : \{\
+		"host" : "shard02",\
+		"port" : 27041,\
+		"version" : "3.4.9",\
+		"gitVersion" : "876ebee8c7dd0e2d992f36a848ff4dc50ee6603e"\
+	\},\
+	"ok" : 1\
+\}\
+}

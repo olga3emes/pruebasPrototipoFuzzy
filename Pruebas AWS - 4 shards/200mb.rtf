@@ -1,0 +1,347 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red209\green244\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\csgenericrgb\c82001\c95705\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16620\viewh9140\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs20 \cf2 \cb3 \CocoaLigature0 db.mb200.find(\{$where:"feq(this.x,this.y) >=0.5"\}).explain("executionStats")\
+\{\
+	"queryPlanner" : \{\
+		"mongosPlannerVersion" : 1,\
+		"winningPlan" : \{\
+			"stage" : "SHARD_MERGE",\
+			"shards" : [\
+				\{\
+					"shardName" : "shard1",\
+					"connectionString" : "shard1/34.244.155.81:27025,34.253.202.223:27024,52.214.150.229:27023",\
+					"serverInfo" : \{\
+						"host" : "shard11",\
+						"port" : 27023,\
+						"version" : "3.4.9",\
+						"gitVersion" : "876ebee8c7dd0e2d992f36a848ff4dc50ee6603e"\
+					\},\
+					"plannerVersion" : 1,\
+					"namespace" : "nodo0.mb200",\
+					"indexFilterSet" : false,\
+					"parsedQuery" : \{\
+						"$where" : \{\
+							"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0003w",\
+							"scope" : \{\
+								\
+							\}\
+						\}\
+					\},\
+					"winningPlan" : \{\
+						"stage" : "SHARDING_FILTER",\
+						"inputStage" : \{\
+							"stage" : "COLLSCAN",\
+							"filter" : \{\
+								"$where" : \{\
+									"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0002d",\
+									"scope" : \{\
+										\
+									\}\
+								\}\
+							\},\
+							"direction" : "forward"\
+						\}\
+					\},\
+					"rejectedPlans" : [ ]\
+				\},\
+				\{\
+					"shardName" : "shard2",\
+					"connectionString" : "shard2/34.244.35.122:27028,34.250.38.192:27026,52.16.99.116:27027",\
+					"serverInfo" : \{\
+						"host" : "shard21",\
+						"port" : 27026,\
+						"version" : "3.4.9",\
+						"gitVersion" : "876ebee8c7dd0e2d992f36a848ff4dc50ee6603e"\
+					\},\
+					"plannerVersion" : 1,\
+					"namespace" : "nodo0.mb200",\
+					"indexFilterSet" : false,\
+					"parsedQuery" : \{\
+						"$where" : \{\
+							"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0003w",\
+							"scope" : \{\
+								\
+							\}\
+						\}\
+					\},\
+					"winningPlan" : \{\
+						"stage" : "SHARDING_FILTER",\
+						"inputStage" : \{\
+							"stage" : "COLLSCAN",\
+							"filter" : \{\
+								"$where" : \{\
+									"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0002d",\
+									"scope" : \{\
+										\
+									\}\
+								\}\
+							\},\
+							"direction" : "forward"\
+						\}\
+					\},\
+					"rejectedPlans" : [ ]\
+				\},\
+				\{\
+					"shardName" : "shard3",\
+					"connectionString" : "shard3/34.245.108.116:27022,52.210.59.235:27021,52.212.92.5:27020",\
+					"serverInfo" : \{\
+						"host" : "shard31",\
+						"port" : 27020,\
+						"version" : "3.4.9",\
+						"gitVersion" : "876ebee8c7dd0e2d992f36a848ff4dc50ee6603e"\
+					\},\
+					"plannerVersion" : 1,\
+					"namespace" : "nodo0.mb200",\
+					"indexFilterSet" : false,\
+					"parsedQuery" : \{\
+						"$where" : \{\
+							"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0003w",\
+							"scope" : \{\
+								\
+							\}\
+						\}\
+					\},\
+					"winningPlan" : \{\
+						"stage" : "SHARDING_FILTER",\
+						"inputStage" : \{\
+							"stage" : "COLLSCAN",\
+							"filter" : \{\
+								"$where" : \{\
+									"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0002d",\
+									"scope" : \{\
+										\
+									\}\
+								\}\
+							\},\
+							"direction" : "forward"\
+						\}\
+					\},\
+					"rejectedPlans" : [ ]\
+				\},\
+				\{\
+					"shardName" : "shard4",\
+					"connectionString" : "shard4/52.209.133.144:27031,52.213.173.108:27030,54.246.213.162:27029",\
+					"serverInfo" : \{\
+						"host" : "shard41",\
+						"port" : 27029,\
+						"version" : "3.4.9",\
+						"gitVersion" : "876ebee8c7dd0e2d992f36a848ff4dc50ee6603e"\
+					\},\
+					"plannerVersion" : 1,\
+					"namespace" : "nodo0.mb200",\
+					"indexFilterSet" : false,\
+					"parsedQuery" : \{\
+						"$where" : \{\
+							"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0003w",\
+							"scope" : \{\
+								\
+							\}\
+						\}\
+					\},\
+					"winningPlan" : \{\
+						"stage" : "SHARDING_FILTER",\
+						"inputStage" : \{\
+							"stage" : "COLLSCAN",\
+							"filter" : \{\
+								"$where" : \{\
+									"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0002d",\
+									"scope" : \{\
+										\
+									\}\
+								\}\
+							\},\
+							"direction" : "forward"\
+						\}\
+					\},\
+					"rejectedPlans" : [ ]\
+				\}\
+			]\
+		\}\
+	\},\
+	"executionStats" : \{\
+		"nReturned" : 1150000,\
+		"executionTimeMillis" : 25181,\
+		"totalKeysExamined" : 0,\
+		"totalDocsExamined" : 1150000,\
+		"executionStages" : \{\
+			"stage" : "SHARD_MERGE",\
+			"nReturned" : 1150000,\
+			"executionTimeMillis" : 25181,\
+			"totalKeysExamined" : 0,\
+			"totalDocsExamined" : 1150000,\
+			"totalChildMillis" : NumberLong(44715),\
+			"shards" : [\
+				\{\
+					"shardName" : "shard1",\
+					"executionSuccess" : true,\
+					"executionStages" : \{\
+						"stage" : "SHARDING_FILTER",\
+						"nReturned" : 649999,\
+						"executionTimeMillisEstimate" : 24857,\
+						"works" : 650001,\
+						"advanced" : 649999,\
+						"needTime" : 1,\
+						"needYield" : 0,\
+						"saveState" : 5184,\
+						"restoreState" : 5184,\
+						"isEOF" : 1,\
+						"invalidates" : 0,\
+						"chunkSkips" : 0,\
+						"inputStage" : \{\
+							"stage" : "COLLSCAN",\
+							"filter" : \{\
+								"$where" : \{\
+									"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0010n",\
+									"scope" : \{\
+										\
+									\}\
+								\}\
+							\},\
+							"nReturned" : 649999,\
+							"executionTimeMillisEstimate" : 24449,\
+							"works" : 650001,\
+							"advanced" : 649999,\
+							"needTime" : 1,\
+							"needYield" : 0,\
+							"saveState" : 5184,\
+							"restoreState" : 5184,\
+							"isEOF" : 1,\
+							"invalidates" : 0,\
+							"direction" : "forward",\
+							"docsExamined" : 649999\
+						\}\
+					\}\
+				\},\
+				\{\
+					"shardName" : "shard2",\
+					"executionSuccess" : true,\
+					"executionStages" : \{\
+						"stage" : "SHARDING_FILTER",\
+						"nReturned" : 250000,\
+						"executionTimeMillisEstimate" : 9710,\
+						"works" : 250002,\
+						"advanced" : 250000,\
+						"needTime" : 1,\
+						"needYield" : 0,\
+						"saveState" : 2013,\
+						"restoreState" : 2013,\
+						"isEOF" : 1,\
+						"invalidates" : 0,\
+						"chunkSkips" : 0,\
+						"inputStage" : \{\
+							"stage" : "COLLSCAN",\
+							"filter" : \{\
+								"$where" : \{\
+									"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0010n",\
+									"scope" : \{\
+										\
+									\}\
+								\}\
+							\},\
+							"nReturned" : 250000,\
+							"executionTimeMillisEstimate" : 9710,\
+							"works" : 250002,\
+							"advanced" : 250000,\
+							"needTime" : 1,\
+							"needYield" : 0,\
+							"saveState" : 2013,\
+							"restoreState" : 2013,\
+							"isEOF" : 1,\
+							"invalidates" : 0,\
+							"direction" : "forward",\
+							"docsExamined" : 250000\
+						\}\
+					\}\
+				\},\
+				\{\
+					"shardName" : "shard3",\
+					"executionSuccess" : true,\
+					"executionStages" : \{\
+						"stage" : "SHARDING_FILTER",\
+						"nReturned" : 1,\
+						"executionTimeMillisEstimate" : 0,\
+						"works" : 3,\
+						"advanced" : 1,\
+						"needTime" : 1,\
+						"needYield" : 0,\
+						"saveState" : 0,\
+						"restoreState" : 0,\
+						"isEOF" : 1,\
+						"invalidates" : 0,\
+						"chunkSkips" : 0,\
+						"inputStage" : \{\
+							"stage" : "COLLSCAN",\
+							"filter" : \{\
+								"$where" : \{\
+									"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0010n",\
+									"scope" : \{\
+										\
+									\}\
+								\}\
+							\},\
+							"nReturned" : 1,\
+							"executionTimeMillisEstimate" : 0,\
+							"works" : 3,\
+							"advanced" : 1,\
+							"needTime" : 1,\
+							"needYield" : 0,\
+							"saveState" : 0,\
+							"restoreState" : 0,\
+							"isEOF" : 1,\
+							"invalidates" : 0,\
+							"direction" : "forward",\
+							"docsExamined" : 1\
+						\}\
+					\}\
+				\},\
+				\{\
+					"shardName" : "shard4",\
+					"executionSuccess" : true,\
+					"executionStages" : \{\
+						"stage" : "SHARDING_FILTER",\
+						"nReturned" : 250000,\
+						"executionTimeMillisEstimate" : 9831,\
+						"works" : 250002,\
+						"advanced" : 250000,\
+						"needTime" : 1,\
+						"needYield" : 0,\
+						"saveState" : 2027,\
+						"restoreState" : 2027,\
+						"isEOF" : 1,\
+						"invalidates" : 0,\
+						"chunkSkips" : 0,\
+						"inputStage" : \{\
+							"stage" : "COLLSCAN",\
+							"filter" : \{\
+								"$where" : \{\
+									"code" : "\\u0019\\u0000\\u0000\\u0000feq(this.x,this.y) >=0.5\\u0000\\u0005\\u0000\\u0000\\u0000\\u0000\\u0000\\u0010n",\
+									"scope" : \{\
+										\
+									\}\
+								\}\
+							\},\
+							"nReturned" : 250000,\
+							"executionTimeMillisEstimate" : 9831,\
+							"works" : 250002,\
+							"advanced" : 250000,\
+							"needTime" : 1,\
+							"needYield" : 0,\
+							"saveState" : 2027,\
+							"restoreState" : 2027,\
+							"isEOF" : 1,\
+							"invalidates" : 0,\
+							"direction" : "forward",\
+							"docsExamined" : 250000\
+						\}\
+					\}\
+				\}\
+			]\
+		\}\
+	\},\
+	"ok" : 1\
+}

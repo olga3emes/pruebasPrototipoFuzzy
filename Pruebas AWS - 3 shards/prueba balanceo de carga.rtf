@@ -1,0 +1,112 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red209\green244\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\csgenericrgb\c82001\c95705\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16620\viewh9140\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \CocoaLigature0 sh.status()\
+--- Sharding Status --- \
+  sharding version: \{\
+	"_id" : 1,\
+	"minCompatibleVersion" : 5,\
+	"currentVersion" : 6,\
+	"clusterId" : ObjectId("5b2bb8e2b2b5bf1815854a9e")\
+\}\
+  shards:\
+	\{  "_id" : "shard1",  "host" : "shard1/34.244.155.81:27025,34.253.202.223:27024,52.214.150.229:27023",  "state" : 1 \}\
+	\{  "_id" : "shard2",  "host" : "shard2/34.244.35.122:27028,34.250.38.192:27026,52.16.99.116:27027",  "state" : 1 \}\
+	\{  "_id" : "shard3",  "host" : "shard3/34.245.108.116:27022,52.210.59.235:27021,52.212.92.5:27020",  "state" : 1 \}\
+  active mongoses:\
+	"3.4.9" : 2\
+ autosplit:\
+	Currently enabled: yes\
+  balancer:\
+	Currently enabled:  yes\
+	Currently running:  yes\
+		Balancer lock taken at Thu Jun 21 2018 14:40:39 GMT+0000 (UTC) by ConfigServer:Balancer\
+	Collections with active migrations: \
+		nodo0.mb500 started at Fri Jun 22 2018 17:43:22 GMT+0000 (UTC)\
+	Failed balancer rounds in last 5 attempts:  0\
+	Migration Results for the last 24 hours: \
+		392 : Success\
+		6 : Failed with error 'aborted', from shard2 to shard3\
+		17 : Failed with error 'aborted', from shard1 to shard3\
+		17 : Failed with error 'aborted', from shard1 to shard2\
+		15 : Failed with error 'aborted', from shard3 to shard2\
+		17 : Failed with error 'aborted', from shard3 to shard1\
+  databases:\
+	\{  "_id" : "nodo0",  "primary" : "shard1",  "partitioned" : true \}\
+		nodo0.mb500\
+			shard key: \{ "_id" : 1 \}\
+			unique: false\
+			balancing: true\
+			chunks:\
+				shard1	4\
+				shard2	3\
+				shard3	6\
+			\{ "_id" : \{ "$minKey" : 1 \} \} -->> \{ "_id" : 1 \} on : shard1 Timestamp(6, 0) \
+			\{ "_id" : 1 \} -->> \{ "_id" : 250001 \} on : shard2 Timestamp(3, 0) \
+			\{ "_id" : 250001 \} -->> \{ "_id" : 500001 \} on : shard2 Timestamp(5, 0) \
+			\{ "_id" : 500001 \} -->> \{ "_id" : 750001 \} on : shard1 Timestamp(5, 1) \
+			\{ "_id" : 750001 \} -->> \{ "_id" : 1030999 \} on : shard1 Timestamp(3, 3) \
+			\{ "_id" : 1030999 \} -->> \{ "_id" : 1280999 \} on : shard2 Timestamp(7, 0) \
+			\{ "_id" : 1280999 \} -->> \{ "_id" : 1530999 \} on : shard3 Timestamp(8, 2) \
+			\{ "_id" : 1530999 \} -->> \{ "_id" : 1649999 \} on : shard3 Timestamp(8, 3) \
+			\{ "_id" : 1649999 \} -->> \{ "_id" : 1899999 \} on : shard3 Timestamp(5, 5) \
+			\{ "_id" : 1899999 \} -->> \{ "_id" : 2165999 \} on : shard3 Timestamp(5, 6) \
+			\{ "_id" : 2165999 \} -->> \{ "_id" : 2415999 \} on : shard3 Timestamp(7, 2) \
+			\{ "_id" : 2415999 \} -->> \{ "_id" : 2702999 \} on : shard3 Timestamp(7, 3) \
+			\{ "_id" : 2702999 \} -->> \{ "_id" : \{ "$maxKey" : 1 \} \} on : shard1 Timestamp(8, 0) \
+\
+mongos> sh.status()\
+--- Sharding Status --- \
+  sharding version: \{\
+	"_id" : 1,\
+	"minCompatibleVersion" : 5,\
+		"currentVersion" : 6,\
+	"clusterId" : ObjectId("5b2bb8e2b2b5bf1815854a9e")\
+\}\
+  shards:\
+	\{  "_id" : "shard1",  "host" : "shard1/34.244.155.81:27025,34.253.202.223:27024,52.214.150.229:27023",  "state" : 1 \}\
+	\{  "_id" : "shard2",  "host" : "shard2/34.244.35.122:27028,34.250.38.192:27026,52.16.99.116:27027",  "state" : 1 \}\
+	\{  "_id" : "shard3",  "host" : "shard3/34.245.108.116:27022,52.210.59.235:27021,52.212.92.5:27020",  "state" : 1 \}\
+  active mongoses:\
+	"3.4.9" : 2\
+ autosplit:\
+	Currently enabled: yes\
+  balancer:\
+	Currently enabled:  yes\
+	Currently running:  no\
+		Balancer lock taken at Thu Jun 21 2018 14:40:39 GMT+0000 (UTC) by ConfigServer:Balancer\
+	Failed balancer rounds in last 5 attempts:  0\
+	Migration Results for the last 24 hours: \
+		393 : Success\
+		6 : Failed with error 'aborted', from shard2 to shard3\
+		17 : Failed with error 'aborted', from shard1 to shard3\
+		17 : Failed with error 'aborted', from shard1 to shard2\
+		15 : Failed with error 'aborted', from shard3 to shard2\
+		17 : Failed with error 'aborted', from shard3 to shard1\
+  databases:\
+	\{  "_id" : "nodo0",  "primary" : "shard1",  "partitioned" : true \}\
+		nodo0.mb500\
+			shard key: \{ "_id" : 1 \}\
+			unique: false\
+			balancing: true\
+			chunks:\
+				shard1	4\
+				shard2	4\
+				shard3	5\
+			\{ "_id" : \{ "$minKey" : 1 \} \} -->> \{ "_id" : 1 \} on : shard1 Timestamp(6, 0) \
+			\{ "_id" : 1 \} -->> \{ "_id" : 250001 \} on : shard2 Timestamp(3, 0) \
+			\{ "_id" : 250001 \} -->> \{ "_id" : 500001 \} on : shard2 Timestamp(5, 0) \
+			\{ "_id" : 500001 \} -->> \{ "_id" : 750001 \} on : shard1 Timestamp(5, 1) \
+			\{ "_id" : 750001 \} -->> \{ "_id" : 1030999 \} on : shard1 Timestamp(3, 3) \
+			\{ "_id" : 1030999 \} -->> \{ "_id" : 1280999 \} on : shard2 Timestamp(7, 0) \
+			\{ "_id" : 1280999 \} -->> \{ "_id" : 1530999 \} on : shard2 Timestamp(9, 0) \
+			\{ "_id" : 1530999 \} -->> \{ "_id" : 1649999 \} on : shard3 Timestamp(9, 1) \
+			\{ "_id" : 1649999 \} -->> \{ "_id" : 1899999 \} on : shard3 Timestamp(5, 5) \
+			\{ "_id" : 1899999 \} -->> \{ "_id" : 2165999 \} on : shard3 Timestamp(5, 6) \
+			\{ "_id" : 2165999 \} -->> \{ "_id" : 2415999 \} on : shard3 Timestamp(7, 2) \
+			\{ "_id" : 2415999 \} -->> \{ "_id" : 2702999 \} on : shard3 Timestamp(7, 3) \
+			\{ "_id" : 2702999 \} -->> \{ "_id" : \{ "$maxKey" : 1 \} \} on : shard1 Timestamp(8, 0) }

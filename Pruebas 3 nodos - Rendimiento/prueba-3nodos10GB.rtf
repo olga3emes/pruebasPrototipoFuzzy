@@ -1,0 +1,83 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red209\green244\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\csgenericrgb\c82001\c95705\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15120\viewh10940\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \CocoaLigature0 db.gb10.find(\{$where:"feq(this.x,this.y) >=0.5"\}).explain("executionStats")\
+\
+\{\
+	"queryPlanner" : \{\
+		"plannerVersion" : 1,\
+		"namespace" : "admin.gb10",\
+		"indexFilterSet" : false,\
+		"parsedQuery" : \{\
+			"$where" : \{\
+				"code" : "feq(this.x,this.y) >=0.5",\
+				"scope" : \{\
+					\
+				\}\
+			\}\
+		\},\
+		"winningPlan" : \{\
+			"stage" : "COLLSCAN",\
+			"filter" : \{\
+				"$where" : \{\
+					"code" : "feq(this.x,this.y) >=0.5",\
+					"scope" : \{\
+						\
+					\}\
+				\}\
+			\},\
+			"direction" : "forward"\
+		\},\
+		"rejectedPlans" : [ ]\
+	\},\
+	"executionStats" : \{\
+		"executionSuccess" : true,\
+		"nReturned" : 23634953,\
+		"executionTimeMillis" : 7550487,\
+		"totalKeysExamined" : 0,\
+		"totalDocsExamined" : 60000000,\
+		"executionStages" : \{\
+			"stage" : "COLLSCAN",\
+			"filter" : \{60000000\
+				"$where" : \{\
+					"code" : "feq(this.x,this.y) >=0.5",\
+					"scope" : \{\
+						\
+					\}\
+				\}\
+			\},\
+			"nReturned" : 23634953,\
+			"executionTimeMillisEstimate" : 7523833,\
+			"works" : 68767002,\
+			"advanced" : 23634953,\
+			"needTime" : 45132048,\
+			"needYield" : 0,\
+			"saveState" : 566157,\
+			"restoreState" : 566157,\
+			"isEOF" : 1,\
+			"invalidates" : 0,\
+			"direction" : "forward",\
+			"docsExamined" : 60000000\
+		\}\
+	\},\
+	"serverInfo" : \{\
+		"host" : "node2.example.com",\
+		"port" : 27017,\
+		"version" : "3.6.4",\
+		"gitVersion" : "d0181a711f7e7f39e60b5aeb1dc7097bf6ae5856"\
+	\},\
+	"ok" : 1,\
+	"operationTime" : Timestamp(1529463467, 1),\
+	"$clusterTime" : \{\
+		"clusterTime" : Timestamp(1529463467, 1),\
+		"signature" : \{\
+			"hash" : BinData(0,"dd9wA5lzJQC2I7TAVNej6wWE54o="),\
+			"keyId" : NumberLong("6557761500113534977")\
+		\}\
+	\}\
+\}\
+}
